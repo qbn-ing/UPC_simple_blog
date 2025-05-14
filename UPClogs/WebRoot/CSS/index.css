@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+:root {
+    --pure-white: #FFF;
+    --gold-text: #FFD700;
+    --sky-blue: #87CEEB;
+    --soft-brown: #A0522D;
+    --pale-pink: #FFB6C1;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--pure-white);
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1,
+h2 {
+    color: var(--brown-red);
+    margin-bottom: 1.5rem;
+}
+
+.post-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(.25, .1, .25, 1);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--sky-blue);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+
+    @keyframes ripple {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+
+.content {
+    flex: 1;
+}
+.new-article {
+    margin: 2rem 0;
+}
+
+.btn-publish {
+    display: inline-block;
+    padding: 12px 36px;
+    background: var(--sky-blue);
+    color: white !important;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-publish:hover {
+    background: var(--gold-text);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+

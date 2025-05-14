@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+:root {
+    --pure-white: #FFF;
+    --gold-text: #FFD700;
+    --sky-blue: #87CEEB;
+    --soft-brown: #A0522D;
+    --pale-pink: #FFB6C1;
+}
+.nav * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.nav h1 {
+    margin-bottom: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.nav a {
+    position: relative;
+    color: var(--sky-blue);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: var(--gold-text);
+    transition: width 0.3s ease;
+}
+
+
+
+.nav .avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.nav .avatar:hover {
+    box-shadow: 0 0 0 1px var(--sky-blue);
+    transition: 0.3s;
+}
+.nav .btn-logout {
+    margin-left: 15px;
+    padding: 8px 16px;
+    background: #ff4949;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav .btn-logout:hover {
+    background: #ff1a1a;
+    text-decoration: none;
+}
+.nav h1 a{
+     margin-bottom: 1.5rem;
+     color: black;
+}

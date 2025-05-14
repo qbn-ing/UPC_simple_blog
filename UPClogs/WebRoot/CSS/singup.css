@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+:root {
+    --pure-white: #FFF;
+    --gold-text: #FFD700;
+    --sky-blue: #87CEEB;
+    --soft-brown: #A0522D;
+}
+
+body {
+    background: url('https://tu.ltyuanfang.cn/api/fengjing.php');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.singup {
+    width: 100%;
+    max-width: 400px;
+    background: var(--pure-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.singup:hover {
+    transform: translateY(-5px);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--soft-brown);
+    font-weight: 500;
+}
+
+input {
+    width: 90%;
+    padding: 1rem;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--sky-blue);
+    box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.2);
+}
+
+.toggle-form {
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--sky-blue);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-form:hover {
+    color: var(--gold-text);
+}
+
+.btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.btn-login {
+    background: linear-gradient(45deg,
+            var(--sky-blue),
+            #4682B4);
+    color: white;
+}
+
+.btn-register {
+    background: var(--soft-brown);
+    color: white;
+}
+
+.link-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.singup .error {
+    color: #FF4444;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
